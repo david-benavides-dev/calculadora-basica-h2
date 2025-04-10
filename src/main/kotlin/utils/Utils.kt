@@ -1,5 +1,8 @@
 package org.example.utils
 
+/**
+ * Singleton con utilidades varias.
+ */
 object Utils {
 
     /**
