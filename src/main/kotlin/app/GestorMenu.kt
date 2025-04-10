@@ -2,6 +2,7 @@ package org.example.app
 
 import org.example.service.ServicioCalc
 import org.example.ui.Consola
+import org.example.ui.IEntradaSalida
 import org.example.utils.IFicheros
 import org.example.utils.Utils
 import java.time.LocalDateTime
@@ -18,7 +19,7 @@ import kotlin.system.exitProcess
  * @property ficheros Interfaz de gestión de ficheros.
  * @property args Los parámetros que recibe al iniciarse el programa mediante main.
  */
-class GestorMenu(private val calculadora: ServicioCalc, private val consola: Consola, private val ficheros: IFicheros, private val args: Array<String>) {
+class GestorMenu(private val calculadora: ServicioCalc, private val consola: IEntradaSalida, private val ficheros: IFicheros, private val args: Array<String>) {
     companion object {
         // Constantes para establecer la ruta por defecto y el prefijo para los archivos log.
         const val RUTA_DEFECTO = "./log"

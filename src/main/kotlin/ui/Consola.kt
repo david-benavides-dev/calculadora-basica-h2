@@ -80,7 +80,7 @@ class Consola : IEntradaSalida {
     /**
      * Pausa la ejecución hasta que el usuario presione una tecla.
      */
-    fun pausar(msjPausa: String = "Presiona ENTER para continuar...") {
+    override fun pausar(msjPausa: String) {
         mostrarMensaje(msjPausa)
         readln()
     }
@@ -88,7 +88,7 @@ class Consola : IEntradaSalida {
     /**
      * Limpia la terminal imprimiendo varias líneas vacías (20).
      */
-    fun limpiarTerminal() {
+    override fun limpiarTerminal() {
         repeat(20) {
             println("\n")
         }

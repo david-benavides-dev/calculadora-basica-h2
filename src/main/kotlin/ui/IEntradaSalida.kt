@@ -6,4 +6,6 @@ interface IEntradaSalida {
     fun pedirOperador(): String
     fun pedirNumero(): Double
     fun pedirOpcion(msj: String): Boolean
+    fun limpiarTerminal()
+    fun pausar(msjPausa: String = "Presiona ENTER para continuar...")
 }

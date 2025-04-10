@@ -31,7 +31,7 @@ tasks.test {
 }
 
 tasks.named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
-    archiveBaseName.set("PruebaCalc")    // Nombre personalizado
+    archiveBaseName.set("calculadora-basica-log")    // Nombre personalizado
     archiveVersion.set("1.0")                // Versión
     archiveClassifier.set("")                // Sin sufijo -all
     mergeServiceFiles()
