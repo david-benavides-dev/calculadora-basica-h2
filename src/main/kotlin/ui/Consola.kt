@@ -46,7 +46,7 @@ class Consola : IEntradaSalida {
      * @param msjError El prefijo que se agregará al mensaje de error.
      */
     override fun mostrarError(msj: String, msjError: String) {
-        mostrarMensaje(msjError + msj, salto = true, pausa = true, limpiar = true)
+        mostrarMensaje(msjError + msj, salto = true, pausa = true)
     }
 
     /**
@@ -80,7 +80,7 @@ class Consola : IEntradaSalida {
     /**
      * Pausa la ejecución hasta que el usuario presione una tecla.
      */
-    private fun pausar(msjPausa: String = "Presiona ENTER para continuar...") {
+    fun pausar(msjPausa: String = "Presiona ENTER para continuar...") {
         mostrarMensaje(msjPausa)
         readln()
     }
@@ -88,7 +88,7 @@ class Consola : IEntradaSalida {
     /**
      * Limpia la terminal imprimiendo varias líneas vacías (20).
      */
-    private fun limpiarTerminal() {
+    fun limpiarTerminal() {
         repeat(20) {
             println("\n")
         }
