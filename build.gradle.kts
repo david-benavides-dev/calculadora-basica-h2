@@ -17,11 +17,13 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("com.h2database:h2:2.2.224")
 }
 
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(21)
 }
@@ -31,7 +33,7 @@ tasks.test {
 }
 
 tasks.named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
-    archiveBaseName.set("calculadora-basica-log")    // Nombre personalizado
+    archiveBaseName.set("calculadora-basica-h2")    // Nombre personalizado
     archiveVersion.set("1.0")                // Versión
     archiveClassifier.set("")                // Sin sufijo -all
     mergeServiceFiles()
